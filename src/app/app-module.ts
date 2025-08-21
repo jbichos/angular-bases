@@ -1,7 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { App } from './app';
+import { App } from './app.component';
 
 @NgModule({
   declarations: [
