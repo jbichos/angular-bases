@@ -2,4 +2,11 @@
 <hr>
 <p>Bienvenidos {{ title }}</p>
 <h2>{{ description }}</h2>
-<h3>Counter:{{ counter }}</h3>
+<h3>Counter: {{ counter }}</h3>
+<button (click)="increment()">+1</button>
+<button (click)="decrement()">-1</button>
+<hr>
+<button (click)="incrementBy(5)">+5</button>
+<button (click)="decrementBy(5)">-5</button>
+<hr>
+<button (click)="reset()">Reset</button>

@@ -15,4 +15,26 @@ export class AppComponent {
   public readonly description: string = 'Angular es un framework de desarrollo web';
   public counter: number = 10;
 
+  increment(): void {
+    this.counter++;
+  }
+
+  decrement(): void {
+    if (this.counter > 0)  // Prevent counter from going negative
+    this.counter--;
+  }
+
+
+  incrementBy( value: number): void {
+    this.counter += value;
+  }
+
+  decrementBy( value: number): void {
+    if (this.counter - value > 0)  // Prevent counter from going negative
+    this.counter -= value;
+  }
+
+  reset(): void {
+    this.counter = 10;
+  }
 }
