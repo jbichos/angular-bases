@@ -16,6 +16,14 @@ export class HeroComponent {
     console.log('HeroComponent initialized');
   }
 
+  get capitalizedName(): string {
+    return this.name.toUpperCase();
+  }
+
+  getHeroDescription(): string {
+    return `${this.name} - ${this.age}`;
+  }
+
   changeName(newName: string): void {
     this.name = newName;
     console.log(`Hero name changed to: ${this.name}`);
