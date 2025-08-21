@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './list.css'
 })
 export class ListComponent {
-  // This component can be used to list heroes or any other items
-  // Add properties and methods as needed for functionality
+  public heroNames: string[] = ['Superman', 'Batman', 'Spiderman', 'Ironman', 'Hulk'];
 
+  constructor() {
+    // Initialization logic can go here if needed
+  }
+
+  // getLastHero(): string {
+  //   return this.heroNames.length > 0 ? this.heroNames[this.heroNames.length - 1] : 'No heroes available';
+  // }
+
+  removeLastHero(): void {
+    if (this.heroNames.length > 0) {
+      this.heroNames.pop();
+    }
+  }
 }
