@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public heroNames: string[] = ['Superman', 'Batman', 'Spiderman', 'Ironman', 'Hulk'];
+  public deletedHero?: string;
 
   constructor() {
     // Initialization logic can go here if needed
@@ -18,8 +19,8 @@ export class ListComponent {
   // }
 
   removeLastHero(): void {
-    if (this.heroNames.length > 0) {
-      this.heroNames.pop();
-    }
+    // if (this.heroNames.length > 0) {
+      this.deletedHero = this.heroNames.pop();
+    // }
   }
 }
