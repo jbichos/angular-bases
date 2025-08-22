@@ -31,6 +31,11 @@ export class MainPageComponent implements OnInit {
     this.characters.push(character);
   }
 
+  onDeleteCharacter(index: number): void {
+    console.log('Main page', index);
+    this.characters.splice(index, 1);
+  }
+
   constructor() { }
 
   ngOnInit() { }
