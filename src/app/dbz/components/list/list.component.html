@@ -1,7 +1,7 @@
 <h4>Listado</h4>
 <ul
   *ngFor="let character of characterList; let i = index; let isFirst = first; let isLast = last; let even = even; let odd = odd"
-  class="list-group">
+  class="list-group" [ngClass]="{ 'list-group-item-light': even, 'list-group-item-dark': odd }">
   <li class="list-group-item">
     <span class="text-primary">{{ i + 1 }}</span>
     .- {{ character.name }} - {{ character.power }}
